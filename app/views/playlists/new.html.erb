@@ -1,22 +1,25 @@
-<h1>YouGenius</h1>
-<div class="row">
-	<div class="col-sm-9">
-		<div id="player"></div>
-	</div>
-
-	<div class="col-sm-3">
-		<div id="search-input">
-			<%= form_tag root_path, :method => 'get' do %>
-				<input id="search" name="search" type="text" class="form-control" placeholder="add song by title" /><span class="btn btn-lg btn-default">Add To Playlist</span>	
-			<% end %>
+<div class="content">
+	<div class="row">
+		<div class="col-sm-7 col-sm-offset-1">
+			<div id="player"></div>
 		</div>
-		<div id="playlist">
-			<%= render "shared_partials/playlist" %>
-		</div>
-	</div>
-</div>		
 
-<div id="lyrics">
-	<%= render "shared_partials/lyrics" %>
+		<div class="col-sm-3">
+			<div id="playlist">
+				<div id="playlist_spinner"></div>
+				<%= render "shared_partials/playlist" %>
+			</div>
+		</div>
+	</div>		
+
+	<div id="lyrics">
+		<div id="lyrics_spinner"></div>
+		<%= render "shared_partials/lyrics" %>
+	</div>
 </div>
 
+<div class="footer">
+  <div class="container">
+    <p class="text-muted"><%= Time.now.year %> YouGenius</p>
+  </div>
+</div>

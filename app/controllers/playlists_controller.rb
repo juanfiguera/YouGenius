@@ -2,6 +2,15 @@ class PlaylistsController < ApplicationController
 
 	#TODO: make this less communist #current_user #devise
 
+	def index
+		@songs = Playlist.last.songs
+
+		respond_to do |format|
+      format.json { render json: {songs: @songs} }
+      format.js   { @songs }
+    end
+	end
+
   def new 
   	@current_playlist = Playlist.new
   	@current_playlist.save

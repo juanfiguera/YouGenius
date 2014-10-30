@@ -15,6 +15,67 @@
 //= require turbolinks
 //= require_tree .
 
+// Spinner props 
+var search_opts = {
+  lines: 15, // The number of lines to draw
+  length: 1, // The length of each line
+  width: 2, // The line thickness
+  radius: 8, // The radius of the inner circle
+  corners: 0, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#000', // #rgb or #rrggbb or array of colors
+  speed: 1.9, // Rounds per second
+  trail: 77, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: 'spinner', // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: '50%', // Top position relative to parent
+  left: '50%' // Left position relative to parent
+};
+var search_target = document.getElementById('search_spinner');
+
+var playlist_opts = {
+  lines: 17, // The number of lines to draw
+  length: 7, // The length of each line
+  width: 2, // The line thickness
+  radius: 11, // The radius of the inner circle
+  corners: 0, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#000', // #rgb or #rrggbb or array of colors
+  speed: 1.9, // Rounds per second
+  trail: 77, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: 'spinner', // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: '50%', // Top position relative to parent
+  left: '50%' // Left position relative to parent
+};
+var playlist_target = document.getElementById('playlist_spinner');
+
+var lyrics_opts = {
+  lines: 17, // The number of lines to draw
+  length: 9, // The length of each line
+  width: 2, // The line thickness
+  radius: 18, // The radius of the inner circle
+  corners: 0, // Corner roundness (0..1)
+  rotate: 0, // The rotation offset
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#000', // #rgb or #rrggbb or array of colors
+  speed: 1.9, // Rounds per second
+  trail: 77, // Afterglow percentage
+  shadow: false, // Whether to render a shadow
+  hwaccel: false, // Whether to use hardware acceleration
+  className: 'spinner', // The CSS class to assign to the spinner
+  zIndex: 2e9, // The z-index (defaults to 2000000000)
+  top: '50%', // Top position relative to parent
+  left: '50%' // Left position relative to parent
+};
+var lyrics_target = document.getElementById('lyrics_spinner');
+
 function addToPlaylist(){
 
   var search = $("#search").val()
@@ -33,6 +94,9 @@ function addToPlaylist(){
       return false;
     }
   });
+
+  $("input[type=text], textarea").val("");
+
 }
 
 function nextVideo(){
@@ -115,7 +179,12 @@ function stopVideo() {
 }
 
 $(document).ready(function(){
-	
+
+  // TODO: get spinners working	
+  // var search_spinner   = new Spinner(search_opts).spin(search_target);
+  // var playlist_spinner = new Spinner(playlist_opts).spin(playlist_target);
+  // var lyrics_spinner   = new Spinner(lyrics_opts).spin(lyrics_target);
+
 	$(".btn").bind('click', function() {
 		addToPlaylist();
 	});

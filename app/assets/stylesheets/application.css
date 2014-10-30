@@ -20,6 +20,15 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+.content {
+	margin-top: 10px;
+	margin-bottom: 100px;
+}
+
+.footer {
+	height: 50px;
+}
+
 @font-face {
   font-family: 'Lato';
   font-style: normal;
