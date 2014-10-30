@@ -1,0 +1,26 @@
+// Place all the styles related to the playlists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin-top: 2px;
+	background-color: #EEE;
+	margin-left: -40px;
+}
+
+
+#description{
+	margin-bottom: 5px;
+}
+.lyric {
+	text-align: center;
+}
+.annotation {
+	margin-top: 2px;
+	background-color: #EEE;
+}
+

@@ -1,0 +1,7 @@
+// update lyrics
+$("#lyrics").hide();
+$("#lyrics").html("<%= escape_javascript(render("shared_partials/lyrics")) %>").fadeIn(10);
+
+// update playlist
+$("#playlist").hide();
+$("#playlist").html("<%= escape_javascript(render("shared_partials/playlist")) %>").fadeIn(10);

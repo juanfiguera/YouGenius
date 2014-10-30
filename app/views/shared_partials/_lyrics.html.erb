@@ -1,0 +1,23 @@
+<div class="row">
+	<h3 class="col-sm-8">
+		<%= @current_song.title %> by <%= @current_song.artist.name %>
+	</h3>
+
+	<p class="col-sm-8">
+		<%= @current_song.description %>
+	</p>
+</div>
+
+<hr>
+
+<p>
+	<div class="row">
+		<% @current_song.lines.each do |l|  %>
+			<p><span class="col-sm-7 lyric"><%= l.lyric %></span></p>
+			<% unless l.annotations.blank? %>
+			<p><span class="col-sm-5 annotation"><%= l.annotations %></span>
+			<% end %>
+			</p>
+		<% end %>
+	</div>
+</p>	

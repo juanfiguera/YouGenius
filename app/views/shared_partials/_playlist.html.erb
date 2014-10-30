@@ -1,0 +1,7 @@
+<p>
+	<ul>
+		<% @current_playlist.songs.each do |s|  %>
+			<li><%= s.title %> by <%= s.artist.name %></li>
+		<% end %>
+	</ul>
+</p>	
