@@ -10,6 +10,9 @@ gem 'sqlite3', group: [:development, :test]
 
 gem 'pg'
 
+gem 'font-awesome-sass'
+
+
 gem 'rails_12factor', group: :production
 
 gem 'bootstrap-sass'
