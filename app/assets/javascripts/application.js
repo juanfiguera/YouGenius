@@ -20,7 +20,7 @@ function addToPlaylist(){
   var search = $("#search").val()
   
   $.ajax({
-    type: "GET",
+    type: "POST",
     url: "/add_to_playlist",
     dataType : 'script',
     data: {
